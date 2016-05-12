@@ -1,0 +1,16 @@
+version: '2'
+services:
+    resume-app:
+        image: resume
+        external_links:
+            - resume-mongodb:mongodb
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=resume
+        ports:
+            - 8080:8080
+    resume-mongodb:
+        extends:
+            file: mongodb.yml
+            service: resume-mongodb

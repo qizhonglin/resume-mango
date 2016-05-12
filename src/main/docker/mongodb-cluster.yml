@@ -1,0 +1,17 @@
+version: '2'
+services:
+    resume-mongodb:
+        container_name: resume-mongodb
+        image: mongo:3.2.3
+        ports:
+            - "27017:27017"
+        command: mongos --configdb resume-mongodb-config
+    resume-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    resume-mongodb-config:
+        image: mongo:3.2.3
+        container_name: resume-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

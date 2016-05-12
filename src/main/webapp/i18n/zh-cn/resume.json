@@ -1,0 +1,18 @@
+{
+    "resume": {
+        "title":  "林其忠",
+        "contactHeader": "联系信息",
+        "contact": {
+            "email": "邮件",
+            "phone": "手机",
+            "github": "GitHub",
+            "linkedin": "领英"
+        },
+        "profileHeader": "基本信息",
+        "experienceHeader": "项目经验",
+        "skillHeader": "技能",
+        "paperHeader": "论文和出版物",
+        "educationHeader": "教育背景",
+        "backToTop": "返回至顶页"
+    }
+}

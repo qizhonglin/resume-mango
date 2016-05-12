@@ -1,0 +1,18 @@
+{
+    "resume": {
+        "title":  "QIZHONG LIN",
+        "contactHeader": "CONTACT INFO",
+        "contact": {
+            "email": "Email",
+            "phone": "Phone",
+            "github": "GitHub",
+            "linkedin": "Linked in"
+        },
+        "profileHeader": "PROFILE",
+        "experienceHeader": "PROFESSIONAL EXPERIENCES",
+        "skillHeader": "SKILLS",
+        "paperHeader": "PAPERS & PUBLICATIONS",
+        "educationHeader": "EDUCATION",
+        "backToTop": "Back to top"
+    }
+}
