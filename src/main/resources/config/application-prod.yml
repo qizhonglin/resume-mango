@@ -19,8 +19,8 @@ spring:
             enabled: false
     data:
         mongodb:
-            uri: mongodb://localhost:27017
-            database: resume
+            uri: mongodb://heroku_55ckb2n1:qzlin19811106@ds023912.mlab.com:23912
+            database: heroku_55ckb2n1
     mail:
         host: localhost
         port: 25
