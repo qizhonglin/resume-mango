@@ -19,8 +19,26 @@
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="resume" ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-file"></span>
                         <span class="hidden-sm" translate="global.menu.resume">Resume</span>
                     </a>
+                </li>
+                <li ui-sref-active="active" uib-dropdown class="dropdown pointer" ng-controller="OverviewController as projectVm">
+                    <a class="dropdown-toggle" uib-dropdown-toggle href="" ng-if="projectVm.projectsFlat.length > 1">
+                        <span>
+                            <span class="glyphicon glyphicon-leaf"></span>
+                            <span class="hidden-sm" translate="global.menu.project">Project</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu ng-if="projectVm.projectsFlat.length > 1">
+                        <li ui-sref-active="active" ng-repeat="project in projectVm.projectsFlat">
+                            <a ui-sref="project.href" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                                <span >{{project.title}}</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
                 <li ng-hide="vm.hide" ng-hide="vm.hide" ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" uib-dropdown class="dropdown pointer">

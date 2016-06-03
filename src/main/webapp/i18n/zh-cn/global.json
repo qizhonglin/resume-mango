@@ -5,6 +5,7 @@
         "menu": {
             "home": "首页",
             "resume": "简历",
+            "project": "项目",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据",

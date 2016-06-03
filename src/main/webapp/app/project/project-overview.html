@@ -1,0 +1,15 @@
+<section id="card">
+    <div class="row" ng-repeat="projectRow in vm.projects">
+        <div class="col-sm-6 col-md-4" ng-repeat="project in projectRow">
+            <div class="thumbnail">
+                <img src="{{project.image}}" alt="..." >
+                <div class="caption">
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <p><a class="btn btn-primary" role="button" href="{{project.href}}">View this product <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -13,8 +13,6 @@
 
 
 spring:
-    profiles:
-        active: prod
     application:
         name: resume
     messages:
