@@ -11,16 +11,16 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state("project-overview", {
+        $stateProvider.state("project-nlp", {
             parent: 'app',
-            url: '/project-overview',
+            url: '/project-nlp',
             data: {
                 authorities: []
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/project/project-overview.html',
-                    controller: 'OverviewController',
+                    templateUrl: 'app/project/project-bigdata.html',
+                    controller: 'NlpController',
                     controllerAs: 'vm'
                 }
             },

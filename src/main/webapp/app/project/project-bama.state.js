@@ -11,16 +11,16 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state("project-overview", {
+        $stateProvider.state("project-bama", {
             parent: 'app',
-            url: '/project-overview',
+            url: '/project-bama',
             data: {
                 authorities: []
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/project/project-overview.html',
-                    controller: 'OverviewController',
+                    templateUrl: 'app/project/project-bama.html',
+                    controller: 'BamaController',
                     controllerAs: 'vm'
                 }
             },

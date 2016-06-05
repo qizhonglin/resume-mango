@@ -1,0 +1,26 @@
+<div class="back-nav">
+    <a role="button" class="btn btn-link"  ui-sref="project-overview"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back to Project Overview</a>
+</div>
+
+<h1 class="center-block project-title">{{vm.projectTitle}}</h1>
+
+<h3 >Keywords:<small> {{vm.keywords}}</small></h3>
+<h3>Abstract:</h3>
+<p class="para-indent" ng-repeat="item in vm.abstract">{{item}}</p>
+
+<h2 class="page-header">Management Summary</h2>
+<p class="para-indent" ng-repeat="item in vm.managementSummary">{{item}}</p>
+
+<h2 class="page-header">Demo</h2>
+<ol>
+  <li ng-repeat="item in vm.workflow">{{item}}</li>
+</ol>
+<uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
+  <uib-slide ng-repeat="slide in vm.slides" active="slide.active" >
+    <img ng-src="{{slide.image}}" style="margin:auto;">
+    <div class="carousel-caption" ng-hide="true">
+      <h4>Slide {{$index}}</h4>
+      <p>{{slide.text}}</p>
+    </div>
+  </uib-slide>
+</uib-carousel>

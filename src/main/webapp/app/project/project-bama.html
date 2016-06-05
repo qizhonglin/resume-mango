@@ -1,0 +1,49 @@
+<div class="back-nav">
+    <a role="button" class="btn btn-link" ui-sref="project-overview"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back to Project Overview</a>
+</div>
+
+<h1 class="center-block project-title">{{vm.projectTitle}}</h1>
+
+<h3 >Keywords:<small> {{vm.keywords}}</small></h3>
+<h3>Abstract:</h3>
+<p class="para-indent" ng-repeat="item in vm.abstract">{{item}}</p>
+
+<h2 class="page-header">Management Summary</h2>
+<div >
+  <p class="para-indent">{{vm.managementSummary.p1}}</p>
+  <p class="para-indent">{{vm.managementSummary.p2}}</p>
+  <ul>
+    <li ng-repeat="item in vm.managementSummary.ul">{{item}}</li>
+  </ul>
+  <p class="para-indent">{{vm.managementSummary.p3}}</p>
+  <p class="para-indent">{{vm.managementSummary.p4}}</p>
+</div>
+
+<h2 class="page-header">Scenario</h2>
+<uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
+  <uib-slide ng-repeat="slide in vm.scenarioSlides" active="slide.active" >
+    <img ng-src="{{slide.image}}" style="margin:auto;" >
+    <div class="carousel-caption" ng-hide="true">
+      <h4>Slide {{$index}}</h4>
+      <p>{{slide.text}}</p>
+    </div>
+  </uib-slide>
+</uib-carousel>
+
+<h2 class="page-header">UI wireframe</h2>
+<div ng-repeat="portal in vm.portal">
+  <h3>{{portal.title}}</h3>
+  <ol>
+    <li ng-repeat="item in portal.workflow">{{item}}</li>
+  </ol>
+  <uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
+    <uib-slide ng-repeat="slide in portal.slides" active="slide.active" >
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <div class="carousel-caption" ng-hide="true">
+        <h4>Slide {{$index}}</h4>
+        <p>{{slide.text}}</p>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>
+

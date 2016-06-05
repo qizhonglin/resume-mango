@@ -1,0 +1,14 @@
+<div class="back-nav">
+    <a role="button" class="btn btn-link"  ui-sref="project-overview"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back to Project Overview</a>
+</div>
+
+
+<uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
+  <uib-slide ng-repeat="slide in vm.slides" active="slide.active" >
+    <img ng-src="{{slide.image}}" style="margin:auto;">
+    <div class="carousel-caption" ng-hide="true">
+      <h4>Slide {{$index}}</h4>
+      <p>{{slide.text}}</p>
+    </div>
+  </uib-slide>
+</uib-carousel>
